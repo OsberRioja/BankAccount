@@ -6,14 +6,16 @@
 export class BankAccount {
   constructor() {
     //this.total=0;
+    this.estado=0;
   }
 
   open() {
     this.total=0;
+    this.estado=1;
   }
 
   close() {
-    throw new Error("Remove this statement and implement this function");
+    this.estado=0;
   }
 
   deposit(amount) {
@@ -25,7 +27,11 @@ export class BankAccount {
   }
 
   get balance() {
-    return this.total;
+    if(this.estado!=0)
+    {
+      return this.total;
+    }
+    throw new ValueError;
   }
 }
 
