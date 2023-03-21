@@ -5,11 +5,11 @@
 
 export class BankAccount {
   constructor() {
-
+    //this.total=0;
   }
 
   open() {
-    
+    this.total=0;
   }
 
   close() {
@@ -25,7 +25,7 @@ export class BankAccount {
   }
 
   get balance() {
-    return 0;
+    return this.total;
   }
 }
 
