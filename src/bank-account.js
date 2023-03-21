@@ -26,11 +26,16 @@ export class BankAccount {
     else{
       throw new ValueError;
     }
-    
   }
 
   withdraw(amount) {
-    this.total=this.total-amount;
+    if(this.estado!=0)
+    {
+      this.total=this.total-amount;
+    }
+    else{
+      throw new ValueError;
+    }
   }
 
   get balance() {
