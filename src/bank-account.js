@@ -15,7 +15,13 @@ export class BankAccount {
   }
 
   close() {
-    this.estado=0;
+    if(this.estado!=0)
+    {
+      this.estado=0;
+    }
+    else{
+      throw new ValueError;
+    }
   }
 
   deposit(amount) {
