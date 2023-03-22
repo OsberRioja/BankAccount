@@ -49,7 +49,7 @@ export class BankAccount {
   withdraw(amount) {
     if(this.estado!=0)
     {
-      if(amount<=this.total)
+      if(amount<=this.total && amount>0)
       {
         this.total=this.total-amount;
       }
