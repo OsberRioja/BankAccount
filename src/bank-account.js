@@ -33,7 +33,13 @@ export class BankAccount {
   deposit(amount) {
     if(this.estado!=0)
     {
-      this.total=this.total+amount;
+      if(amount>0)
+      {
+        this.total=this.total+amount;
+      }
+      else{
+        throw new ValueError;
+      }
     }
     else{
       throw new ValueError;
