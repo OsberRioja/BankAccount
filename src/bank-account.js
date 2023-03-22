@@ -10,8 +10,14 @@ export class BankAccount {
   }
 
   open() {
-    this.total=0;
-    this.estado=1;
+    if(this.estado!=1)
+    {
+      this.estado=1;
+      this.total=0;
+    }
+    else{
+      throw new ValueError;
+    }
   }
 
   close() {
